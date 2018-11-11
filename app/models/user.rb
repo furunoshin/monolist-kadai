@@ -23,7 +23,6 @@ class User < ApplicationRecord
   
   def have(item)
     self.haves.find_or_create_by(item_id: item.id)
-    have.destroy if have
   end
   
   def unhave(item)
